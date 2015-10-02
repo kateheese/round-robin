@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  header
+    h1 Round Robin
+  div.container
+    div.row
+      form(action='/' method='POST')
+        div
+          label(for='teams') Enter in list of teams:
+        div
+          textarea(name='teams' id='teams')
+        div
+          input(type='submit' value='Generate')
+
+    if teams
+      div.row
+        - var counter = 0;
+        for team in teams
+          - counter++;
+          div.results
+            p= 'Round ' + counter
+          div.results
+            table
+              tr
+                th Team 1
+                th Team 2
+              tr
+                td= team[0]
+                td= team[1]
