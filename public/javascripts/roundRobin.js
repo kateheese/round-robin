@@ -6,6 +6,7 @@ var robin = {
     var inputRemix = input.slice();
     var halves = [];
     var pairs = [];
+    var seasonedPairs = [];
     if(inputRemix.length % 2 != 0) {
       inputRemix.splice(1,0,'none');
     }
@@ -16,6 +17,8 @@ var robin = {
       for(var i = 0; i < inputRemix.length/2; i++) {
         pairs.push([halves[0][i], halves[1][i]]);
       }
+      seasonedPairs.push(pairs);
+      pairs = [];
     };
 
     function shiftHalves() {
@@ -28,14 +31,7 @@ var robin = {
       shiftHalves(); 
       splitPairs();
     };
-    return pairs;
-  },
-  rounds: function(n) {
-    var numbers = []
-    for(var i = 1; i < n; i++) {
-      numbers.push(i);
-    }
-    return numbers;
+    return seasonedPairs;
   }
 };
 

@@ -1,27 +1,12 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-image: url('/images/background-image.jpg');
 }
 
 a {
   color: #00B7FF;
 }
 
-header {
-  background-color: white;
-  height: 100px;
-  margin: -78px -60px 0 -60px;
-}
-
-.container   {
-  background-color: white;
-  width: 100%;
-}
-
-h1 {
-  padding: 30px;
-}
 
 table {
   border-collapse: collapse;

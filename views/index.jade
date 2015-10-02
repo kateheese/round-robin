@@ -25,6 +25,7 @@ block content
               tr
                 th Team 1
                 th Team 2
-              tr
-                td= team[0]
-                td= team[1]
+              each pair in team
+                tr
+                  td= pair[0]
+                  td= pair[1]
